@@ -1,0 +1,50 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: $primary-color;
+  font: 400 16px/1.6 $primary-font-family;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+h2, h3, h4, h5, h6{
+  color: $primary-color;
+}
+
+h2{
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+a{
+  color: darken($primary-color, 10%);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s ease;
+
+  &:hover{
+    opacity: .7;
+  }
+
+}

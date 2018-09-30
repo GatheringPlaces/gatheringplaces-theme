@@ -1,0 +1,17 @@
+.site-description{
+  margin-top: 2rem;
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+.site-meta{
+  font-size: .75rem;
+}
+
+.site-actions{
+  @include unstyled-list();
+
+  li{
+    margin-bottom: 1rem;
+  }
+}

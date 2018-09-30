@@ -1,0 +1,24 @@
+#ignore system stuff
+.DS_Store
+thumbs.db
+
+#ignore sql dumps
+*.sql
+
+#ignore core omeka files
+omeka-2.6.1/
+
+#ignore nodule modules folder
+node_modules/
+
+#ignore vagrant files
+.vagrant/
+Homestead.yaml
+Vagrantfile
+after.sh
+
+#ignore composer files
+vendor/
+composer.json
+composer.lock
+aliases

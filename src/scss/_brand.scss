@@ -1,0 +1,16 @@
+.brand{
+  display: inline-block;
+  font-family: $primary-font-family;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: 3px;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+
+  svg{
+    width: 3rem;
+    height: auto;
+    padding-right: .25rem;
+    vertical-align: middle;
+  }
+}

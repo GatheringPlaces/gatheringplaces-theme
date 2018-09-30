@@ -1,0 +1,38 @@
+.collection-map{
+  height: 18rem;
+}
+
+.collection-items{
+  @include unstyled-list;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 48rem;
+  margin: 2rem auto 4rem;
+}
+
+.collection-item{
+  width: calc(25% - 2rem);
+  margin: 0 1rem 2rem;
+
+  a{
+    display: block;
+  }
+}
+
+.collection-item-asset{
+  margin: 0;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  figcaption{
+    padding: 0 .25rem;
+    font-size: .75rem;
+  }
+}
+
+.collection-creators{
+  font-size: .875rem;
+}

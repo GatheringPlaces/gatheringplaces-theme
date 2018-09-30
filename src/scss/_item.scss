@@ -1,0 +1,42 @@
+.item-asset{
+  width: 60%;
+  max-width: 48rem;
+  margin: 2rem auto;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.item-description{
+  margin-top: 2rem;
+}
+
+.item-collection-statement{
+  font-style: italic;
+}
+
+.item-tags{
+  @include unstyled-list;
+  margin-bottom: 2rem;
+
+  .tag{
+    display: inline-block;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 3rem;
+    border: 2px solid $white;
+    font-size: .8125rem;
+  }
+}
+
+.item-metadata{
+  @include unstyled-list;
+
+  li{
+    margin-bottom: .5rem;
+    font-size: .875rem;
+  }
+}
