@@ -3,6 +3,7 @@
 var browserSync = require('browser-sync');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var strip = require('gulp-strip-comments');
 
 //browser sync
 gulp.task('browser-sync', ['sass', 'templates'], function() {
@@ -14,14 +15,15 @@ gulp.task('browser-sync', ['sass', 'templates'], function() {
 //move templates
 gulp.task('templates', function(){
   return gulp.src('src/theme/**/*')
-    .pipe(gulp.dest('omeka-2.6.1/themes/gatheringplaces'))
+    .pipe(strip())
+    .pipe(gulp.dest('./omeka-2.6.1/themes/gatheringplaces'))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('sass', function () {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./src/themes/css'))
+    .pipe(gulp.dest('./omeka-2.6.1/themes/gatheringplaces/css'))
     .pipe(browserSync.reload({stream:true}))
 });
 

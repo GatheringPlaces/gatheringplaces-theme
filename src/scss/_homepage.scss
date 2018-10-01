@@ -9,7 +9,10 @@
 }
 
 .site-actions{
-  @include unstyled-list();
+
+  ul{
+    @include unstyled-list();
+  }
 
   li{
     margin-bottom: 1rem;

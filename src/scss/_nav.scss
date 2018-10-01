@@ -12,6 +12,7 @@
 
   @media screen and (#{$bp-larger-than-tablet}){
     position: static;
+    display: flex;
     float: right;
     width: auto;
     height: auto;
@@ -44,6 +45,12 @@
       display: inline-block;
       margin-bottom: 0;
     }
+
+    &.active{
+      a{
+        color: $primary-color;
+      }
+    }
   }
 
   a{
@@ -58,10 +65,6 @@
       margin-left: 2rem;
       //color: $white;
 
-    }
-
-    &.active{
-      color: $light-grey;
     }
   }
 }
@@ -95,6 +98,8 @@
 
 .search{
   display: inline-block;
+  margin-top: .25rem;
+  margin-left: 1rem;
   background-color: transparent;
   border: 0;
   text-align: center;
