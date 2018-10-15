@@ -1,0 +1,40 @@
+
+//form in nav
+.search-form{
+  margin-top: -.5rem;
+  margin-left: 2rem;
+  background-color: rgba(255,255,255, .6);
+
+
+  ::placeholder{
+    color: $primary-color;
+    font-family: inherit;
+    font-size: .75rem;
+    font-style: italic;
+  }
+
+  .form-control{
+    display: inline-block;
+  }
+
+  input[type=text]{
+    padding: .75rem;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.search-button{
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+
+  svg{
+    width: auto;
+    height: 1rem;
+    fill: $primary-color;
+  }
+}

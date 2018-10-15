@@ -46,11 +46,15 @@
           );
         ?>
         <?php echo public_nav_main(array('role' => 'navigation'))->renderMenu(null, $navOptions); ?>
-        <button class="search">
-          <a href="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1"><title>path12423</title><desc>Created with Sketch.</desc><g><g transform="translate(-1178.000000, -43.000000)"><g transform="translate(1178.000000, 43.000000)"><path d="M2.7 2.7C-0.9 6.3-0.9 12.2 2.7 15.8 5.7 18.8 10.4 19.3 14 17.2L20.3 23.3C21.2 24.2 22.6 24.1 23.4 23.2 24.2 22.4 24.2 21 23.3 20.1L17.1 14.1C19.3 10.5 18.8 5.8 15.8 2.7 12.2-0.9 6.3-0.9 2.7 2.7L2.7 2.7 2.7 2.7ZM5.3 5.3C7.5 3.2 11 3.2 13.1 5.3 15.3 7.5 15.3 11 13.1 13.1 11 15.3 7.5 15.3 5.3 13.1 3.2 11 3.2 7.5 5.3 5.3L5.3 5.3Z"/></g></g></g></svg>
-          </a>
-        </button>
+        <form class="search-form" role="search" action="<?php echo public_url(''); ?>search">
+            <div class="form-control">
+              <label for="query" style="display: none;">Search</label>
+              <input type="text" name="query" id="query" value="" title="Search" placeholder="Search the site">
+            </div>
+            <button type="submit" class="search-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1"><title>path12423</title><desc>Created with Sketch.</desc><g><g transform="translate(-1178.000000, -43.000000)"><g transform="translate(1178.000000, 43.000000)"><path d="M2.7 2.7C-0.9 6.3-0.9 12.2 2.7 15.8 5.7 18.8 10.4 19.3 14 17.2L20.3 23.3C21.2 24.2 22.6 24.1 23.4 23.2 24.2 22.4 24.2 21 23.3 20.1L17.1 14.1C19.3 10.5 18.8 5.8 15.8 2.7 12.2-0.9 6.3-0.9 2.7 2.7L2.7 2.7 2.7 2.7ZM5.3 5.3C7.5 3.2 11 3.2 13.1 5.3 15.3 7.5 15.3 11 13.1 13.1 11 15.3 7.5 15.3 5.3 13.1 3.2 11 3.2 7.5 5.3 5.3L5.3 5.3Z"/></g></g></g></svg>
+            </button>
+        </form>
       </nav>
     </div>
   </header>
