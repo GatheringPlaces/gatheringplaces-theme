@@ -18,11 +18,7 @@
   width: 40%;
 }
 
-.item-images{
-  @include unstyled-list;
-}
-
-.item-image{
+.item-file{
   margin: 0;
 
   img{

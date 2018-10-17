@@ -15,21 +15,10 @@
   <section class="page-content">
     <div class="container">
       <section class="item-assets">
-        <?php $images = $item->Files; $imagesCount = 1; ?>
-          <?php if ($images): ?>
-          <ul class="item-images">
-            <?php foreach ($images as $image): ?>
-              <?php if ($imagesCount === 1): ?>
-                <li>
-                  <figure class="item-image">
-                    <img src="<?php echo url('/'); ?>files/original/<?php echo $image->filename; ?>" /></li>
-                  </figure>
-                </li>
-              <?php endif; ?>
-            <?php $imagesCount++; endforeach; ?>
-          </ul>
+        <?php if (metadata('item', 'has files')): ?>
+          <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
         <?php else: ?>
-          <div class="no-image">No photos available.</div>
+          <div class="no-image">No files or photos available.</div>
         <?php endif; ?>
       </section>
       <section class="item-metadata">
@@ -56,8 +45,8 @@
       </section>
       <section class="pagination">
         <ul class="pager">
-            <li class="previous"><?php echo link_to_previous_item_show(); ?></li>
-            <li class="next"><?php echo link_to_next_item_show(); ?></li>
+            <li class="previous"><?php echo link_to_previous_item_show('Prev'); ?></li>
+            <li class="next"><?php echo link_to_next_item_show('Next'); ?></li>
         </ul>
       </section>
     </div>
