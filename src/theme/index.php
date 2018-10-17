@@ -11,7 +11,7 @@
 ?>
 
 <div class="container">
-  <section class="page homepage">
+  <section class="homepage">
     <section class="page-intro" id="page-intro" aria-hidden="false">
       <button class="collapse-section" aria-expanded="true" aria-controls="page-intro"></button>
       <p class="site-description"><?php echo get_theme_option('Homepage Tagline'); ?></p>

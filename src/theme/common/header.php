@@ -15,7 +15,7 @@
       if (isset($title)) { $titleParts[] = strip_formatting($title); }
       $titleParts[] = option('site_title');
   ?>
-  <title><?php echo implode(' &middot; ', $titleParts); ?></title>
+  <title><?php echo implode(' | ', $titleParts); ?></title>
   <?php echo auto_discovery_link_tags(); ?>
 
   <!-- Will fire plugins that need to include their own files in <head> -->

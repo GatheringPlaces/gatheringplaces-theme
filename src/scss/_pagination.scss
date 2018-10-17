@@ -1,0 +1,17 @@
+.pagination{
+  order: 3;
+  width: 100%;
+  margin: 4rem auto;
+}
+
+.pager{
+  @include unstyled-list;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+
+  li{
+    display: inline-block;
+    margin: 0 1rem;
+  }
+}
