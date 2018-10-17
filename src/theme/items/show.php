@@ -16,7 +16,7 @@
     <div class="container">
       <section class="item-assets">
         <?php if (metadata('item', 'has files')): ?>
-          <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
+          <?php echo files_for_item(array('imageSize' => 'fullsize'), array('class' => 'item-file')); ?>
         <?php else: ?>
           <div class="no-image">No files or photos available.</div>
         <?php endif; ?>

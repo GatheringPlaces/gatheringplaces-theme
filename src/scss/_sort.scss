@@ -1,0 +1,18 @@
+#sort-links-list{
+  @include unstyled-list;
+  display: inline-block;
+
+  li{
+    display: inline-block;
+    margin-left: 1rem;
+
+    a{
+      display: block;
+      padding: .5rem;
+      background-color: $light-grey;
+      letter-spacing: .5px;
+      color: $black;
+      font-size: .75rem;
+    }
+  }
+}
