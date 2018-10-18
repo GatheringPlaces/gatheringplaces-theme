@@ -67,35 +67,17 @@
   }
 }
 
-//styles for browse item-previews
-
-.item-previews{
-  @include unstyled-list;
+.item-pagination{
+  order: 3;
+  width: 100%;
+  margin: 4rem auto;
 }
 
-.item-preview{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem 0;
-  border-bottom: 1px solid $border-color;
-}
-
-.item-preview-img{
-  width: 25%;
-}
-
-.item-preview-meta{
-  width: calc(70% - 2rem);
-  margin-left: 2rem;
-
-  h2{
-    margin-bottom: .5rem;
-    text-transform: none;
-    font-size: 1.25rem;
-  }
-
-  .item-description{
-    margin-top: 0;
-    font-size: .875rem;
+#item-filters{
+  ul{
+    @include unstyled-list;
+    li{
+      font-size: .875rem;
+    }
   }
 }

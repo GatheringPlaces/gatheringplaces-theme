@@ -1,10 +1,6 @@
-.pagination{
-  order: 3;
-  width: 100%;
-  margin: 4rem auto;
-}
 
-.pager{
+
+.pagination{
   @include unstyled-list;
   width: 70%;
   margin: auto;
@@ -18,10 +14,14 @@
   a{
     display: block;
     padding: .5rem 1.25rem;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: $white;
     text-transform: uppercase;
     font-size: .75rem;
     letter-spacing: 1px;
+  }
+
+  .page-input{
+    display: none;
   }
 }

@@ -43,11 +43,13 @@
           <li>Creator: <?php echo metadata($item, array('Dublin Core', 'Creator')); ?></li>
         </ul>
       </section>
-      <section class="pagination">
-        <ul class="pager">
-            <li class="previous"><?php echo link_to_previous_item_show('Prev'); ?></li>
-            <li class="next"><?php echo link_to_next_item_show('Next'); ?></li>
-        </ul>
+      <section class="item-pagination">
+        <nav class="pagination-nav" aria-label="Pagination">
+          <ul class="pagination">
+              <li class="pagination_previous"><?php echo link_to_previous_item_show('Previous Item'); ?></li>
+              <li class="pagination_next"><?php echo link_to_next_item_show('Next Item'); ?></li>
+          </ul>
+        </nav>
       </section>
     </div>
   </section>

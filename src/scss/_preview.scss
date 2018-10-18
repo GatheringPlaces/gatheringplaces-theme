@@ -1,0 +1,33 @@
+//styles for browse previews
+
+.previews{
+  @include unstyled-list;
+  margin-bottom: 2rem;
+}
+
+.preview{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  border-bottom: 1px solid $border-color;
+}
+
+.preview-img{
+  width: 25%;
+}
+
+.preview-meta{
+  width: calc(70% - 2rem);
+  margin-left: 2rem;
+
+  h2{
+    margin-bottom: .5rem;
+    text-transform: none;
+    font-size: 1.25rem;
+  }
+
+  .description{
+    margin-top: 0;
+    font-size: .875rem;
+  }
+}
