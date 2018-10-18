@@ -29,8 +29,13 @@ $searchRecordTypes = get_search_record_types();
               <?php endif; ?>
             </div>
             <div class="preview-meta">
+              <span class="record-type"><?php echo $recordType; ?></span>
               <h2><a href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a></h2>
-              <p class="record-type"><?php echo $recordType; ?></p>
+              <?php if ($description = metadata(strtolower($recordType), array('Dublin Core', 'Description'), array('snippet' => 140))): ?>
+                <div class="description">
+                    <?php echo $description; ?>
+                </div>
+              <?php endif; ?>
             </div>
           </li>
         <?php endforeach; ?>

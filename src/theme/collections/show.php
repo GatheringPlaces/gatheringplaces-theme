@@ -11,7 +11,7 @@
         <li><a href="/collections/browse/">Collections</a></li>
       </ul>
       <h1><?php echo $collectionTitle; ?></h1>
-      <p>Collection curated by <?php echo metadata('collection', array('Dublin Core', 'Creator')); ?></p>
+      <p>Collection curated by <?php echo (metadata('collection', array('Dublin Core', 'Creator'))?metadata('collection', array('Dublin Core', 'Creator')):metadata('collection', array('Dublin Core', 'Contributor'))); ?></p>
     </div>
   </header>
   <section class="page-content">
