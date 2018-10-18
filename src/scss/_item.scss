@@ -73,11 +73,24 @@
   margin: 4rem auto;
 }
 
-#item-filters{
+#item-filters, #search-filters{
+  margin-top: 2rem;
   ul{
     @include unstyled-list;
     li{
+      margin-bottom: .5rem;
       font-size: .875rem;
+    }
+    ul{
+      li{
+        display: inline;
+
+        &:not(:last-child){
+            &:after{
+            content: ", ";
+          }
+        }
+      }
     }
   }
 }
