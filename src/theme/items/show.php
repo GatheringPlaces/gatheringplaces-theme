@@ -6,8 +6,8 @@
   <header class="page-header">
     <div class="container">
       <ul class="breadcrumbs">
-        <li><a href="/">Home</a></li>
-        <li><a href="/items/browse/">Items</a></li>
+        <li><a href="<?php echo get_theme_option('baseurl'); ?>">Home</a></li>
+        <li><a href="<?php echo get_theme_option('baseurl'); ?>items/browse/">Items</a></li>
       </ul>
       <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
     </div>

@@ -8,8 +8,7 @@
   <header class="page-header">
     <div class="container">
       <ul class="breadcrumbs">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="<?php echo get_theme_option('baseurl'); ?>">Home</a></li>
       </ul>
       <h1><?php echo $pageTitle ?></h1>
     </div>

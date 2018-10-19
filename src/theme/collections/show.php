@@ -7,8 +7,8 @@
   <header class="page-header">
     <div class="container">
       <ul class="breadcrumbs">
-        <li><a href="/">Home</a></li>
-        <li><a href="/collections/browse/">Collections</a></li>
+        <li><a href="<?php echo get_theme_option('baseurl'); ?>">Home</a></li>
+        <li><a href="<?php echo get_theme_option('baseurl'); ?>collections/browse/">Collections</a></li>
       </ul>
       <h1><?php echo $collectionTitle; ?></h1>
       <p>Collection curated by <?php echo (metadata('collection', array('Dublin Core', 'Creator'))?metadata('collection', array('Dublin Core', 'Creator')):metadata('collection', array('Dublin Core', 'Contributor'))); ?></p>
@@ -21,7 +21,7 @@
             <?php foreach (loop('items') as $item): ?>
               <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
               <li class="collection-item">
-                <a href="/items/show/<?php echo $item->id; ?>">
+                <a href="<?php echo get_theme_option('baseurl'); ?>items/show/<?php echo $item->id; ?>">
                   <figure class="collection-item-asset">
                     <?php if (metadata('item', 'has thumbnail')): ?>
                       <?php echo item_image('square_thumbnail', array('alt' => $itemTitle)); ?>

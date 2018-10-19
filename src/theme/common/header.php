@@ -6,6 +6,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/site.webmanifest">
+  <link rel="mask-icon" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/safari-pinned-tab.svg" color="#6e8787">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#6e8787">
+
   <?php if ( $description = option('description')): ?>
       <meta name="description" content="<?php echo $description; ?>" />
   <?php endif; ?>
@@ -37,7 +45,7 @@
 <?php echo body_tag(); ?>
   <header class="site-header" role="banner">
     <div class="container">
-      <a href="/" class="brand"><svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg"><title>Gathering Places Logo</title><g fill="#FFF" fill-rule="nonzero" opacity="0.373828125"><path d="M11.199 20.212l-7.67-7.289-2.496 2.373 7.668 7.29L0 30.857l2.497 2.374 11.199-10.646zM13.402 9.225l-2.445 2.38 9.888 9.626 2.446-2.38-.001-.002L39.26 3.304 36.816.924l-15.97 15.545z"/><path d="M18.956 11.443l2.37 2.403 10.63-10.78-2.37-2.404-8.26 8.377L12.414 0l-2.37 2.403 8.914 9.039zM18.766 32.937l.001.001L6.391 45.524 8.826 48l12.376-12.586 7.407 7.533 2.434-2.476-9.842-10.01z"/><path d="M18.897 25.556v.001l-7.94 8.319 2.367 2.479 7.94-8.318 12.89 13.501 2.368-2.479-15.258-15.982zM24.41 20.152l-2.497 2.384 11.2 10.695 2.498-2.384-8.703-8.31 11.44-10.922L35.85 9.23 24.41 20.153z"/><path d="M33.992 22.465l4.152-4.3-2.387-2.473-6.54 6.774 2.387 2.472.001-.001 8.008 8.294L42 30.759zM17.628 24.731l2.459-2.417-7.674-7.545-2.46 2.418 5.214 5.126-13.34 13.115 2.458 2.418L17.627 24.73z"/></g></svg> Gathering Places</a>
+      <a href="<?php echo get_theme_option('baseurl'); ?>" class="brand"><svg viewBox="0 0 42 48" xmlns="http://www.w3.org/2000/svg"><title>Gathering Places Logo</title><g fill="#FFF" fill-rule="nonzero" opacity="0.373828125"><path d="M11.199 20.212l-7.67-7.289-2.496 2.373 7.668 7.29L0 30.857l2.497 2.374 11.199-10.646zM13.402 9.225l-2.445 2.38 9.888 9.626 2.446-2.38-.001-.002L39.26 3.304 36.816.924l-15.97 15.545z"/><path d="M18.956 11.443l2.37 2.403 10.63-10.78-2.37-2.404-8.26 8.377L12.414 0l-2.37 2.403 8.914 9.039zM18.766 32.937l.001.001L6.391 45.524 8.826 48l12.376-12.586 7.407 7.533 2.434-2.476-9.842-10.01z"/><path d="M18.897 25.556v.001l-7.94 8.319 2.367 2.479 7.94-8.318 12.89 13.501 2.368-2.479-15.258-15.982zM24.41 20.152l-2.497 2.384 11.2 10.695 2.498-2.384-8.703-8.31 11.44-10.922L35.85 9.23 24.41 20.153z"/><path d="M33.992 22.465l4.152-4.3-2.387-2.473-6.54 6.774 2.387 2.472.001-.001 8.008 8.294L42 30.759zM17.628 24.731l2.459-2.417-7.674-7.545-2.46 2.418 5.214 5.126-13.34 13.115 2.458 2.418L17.627 24.73z"/></g></svg> Gathering Places</a>
       <nav class="site-nav">
         <?php
           $navOptions = array(

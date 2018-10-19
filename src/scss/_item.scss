@@ -8,6 +8,8 @@
 }
 
 .item-assets{
+  display: flex;
+  flex-wrap: wrap;
   order: 2;
   width: calc(60% - 4rem);
   margin-left: 4rem;
@@ -20,6 +22,11 @@
 
 .item-file{
   margin: 0;
+
+  &:not(:first-child){
+    width: calc(33.333% - 1rem);
+    margin: .5rem;
+  }
 
   img{
     max-width: 100%;
