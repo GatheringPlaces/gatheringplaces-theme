@@ -11,7 +11,7 @@
 ?>
 
 <section class="landing-page homepage">
-  <section class="landing-page-intro" id="page-intro" aria-hidden="false">
+  <section class="landing-page-intro section-collapsible" id="page-intro" aria-hidden="false">
     <button class="collapse-section-control" aria-expanded="true" aria-controls="page-intro"></button>
     <div class="landing-page-intro-inner">
       <p class="site-description"><?php echo get_theme_option('Homepage Tagline'); ?></p>
@@ -26,7 +26,7 @@
     </div>
   </section>
 
-  <section class="landing-page-content">
+  <section class="landing-page-content section-expandable">
     <iframe src="<?php echo nl_getExhibitUrl($neatline, "fullscreen")  ?>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" seamless></iframe>
   </section>
 </section>

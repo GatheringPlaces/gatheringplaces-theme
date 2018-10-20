@@ -5,11 +5,13 @@
   <script>
     (function(){
       var collapse = document.querySelector('.collapse-section-control');
-      var introSection = document.querySelector('.landing-page-intro');
-      var state = introSection.getAttribute('aria-hidden') === 'true' ? false : true;
+      var sectionCollapse = document.querySelector('.section-collapsible');
+      var sectionExpand = document.querySelector('.section-expandable');
+      var state = sectionCollapse.getAttribute('aria-hidden') === 'true' ? false : true;
       collapse.addEventListener('click', function(){
-        introSection.classList.toggle('section-collapsed');
-        introSection.getAttribute('aria-hidden', state);
+        sectionCollapse.classList.toggle('section-collapsed');
+        sectionCollapse.getAttribute('aria-hidden', state);
+        sectionExpand.classList.toggle('section-expanded');
         this.classList.toggle('collapsed');
         this.getAttribute('aria-expanded', !state);
       })

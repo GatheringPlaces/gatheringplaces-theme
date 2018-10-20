@@ -11,23 +11,12 @@
 }
 
 .landing-page-intro{
-  position: relative;
-  width: 40%;
+  width: 30%;
   padding: 2rem;
   background-color: $primary-color;
   color: $white;
   overflow-x: auto;
   transform: none;
-  transition: width .2s linear;
-
-  &.section-collapsed{
-    width: 0;
-    overflow: hidden;
-
-    .landing-page-intro-inner{
-      visibility: hidden;
-    }
-  }
 
   p{
     max-width: 95%;
@@ -46,7 +35,7 @@
 }
 
 .landing-page-content{
-  width: 100%;
+  width: 70%;
   height: 100%;
   padding: 2rem;
   background-color: $white;

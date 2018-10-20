@@ -88,3 +88,24 @@
     }
   }
 }
+
+.section-collapsible{
+  position: absolute;
+  left: 0;
+  transition: left .2s linear;
+}
+
+.section-collapsed{
+  left: calc(-30% + 2rem);
+  overflow: hidden;
+}
+
+.section-expandable{
+  position: absolute;
+  right: 0;
+  transition: width .2s linear;
+}
+
+.section-expanded{
+  width: calc(100% - 2rem) !important;
+}
