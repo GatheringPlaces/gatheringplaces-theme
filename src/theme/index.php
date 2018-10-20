@@ -12,15 +12,17 @@
 
 <section class="landing-page homepage">
   <section class="landing-page-intro" id="page-intro" aria-hidden="false">
-    <button class="collapse-section" aria-expanded="true" aria-controls="page-intro"></button>
-    <p class="site-description"><?php echo get_theme_option('Homepage Tagline'); ?></p>
-    <hr>
-    <div class="site-actions">
-      <?php echo get_theme_option('Homepage Actions'); ?>
-    </div>
-    <hr>
-    <div class="site-meta">
-      <p><?php echo get_theme_option('Homepage Sponsor Text'); ?></p>
+    <button class="collapse-section-control" aria-expanded="true" aria-controls="page-intro"></button>
+    <div class="landing-page-intro-inner">
+      <p class="site-description"><?php echo get_theme_option('Homepage Tagline'); ?></p>
+      <hr>
+      <div class="site-actions">
+        <?php echo get_theme_option('Homepage Actions'); ?>
+      </div>
+      <hr>
+      <div class="site-meta">
+        <p><?php echo get_theme_option('Homepage Sponsor Text'); ?></p>
+      </div>
     </div>
   </section>
 

@@ -4,12 +4,12 @@
   <!--scripts-->
   <script>
     (function(){
-      var collapse = document.querySelector('.collapse-section');
-      var section = document.querySelector('.page-intro');
-      var state = section.getAttribute('aria-hidden') === 'true' ? false : true;
+      var collapse = document.querySelector('.collapse-section-control');
+      var introSection = document.querySelector('.landing-page-intro');
+      var state = introSection.getAttribute('aria-hidden') === 'true' ? false : true;
       collapse.addEventListener('click', function(){
-        section.classList.toggle('section-collapsed');
-        section.getAttribute('aria-hidden', state);
+        introSection.classList.toggle('section-collapsed');
+        introSection.getAttribute('aria-hidden', state);
         this.classList.toggle('collapsed');
         this.getAttribute('aria-expanded', !state);
       })

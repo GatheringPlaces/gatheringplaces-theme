@@ -55,7 +55,7 @@
   color: $dark-grey;
 }
 
-.collapse-section{
+.collapse-section-control{
   position: absolute;
   top: 50%;
   right: 0;
@@ -68,7 +68,6 @@
   text-align: center;
   line-height: 1;
   cursor: pointer;
-  transform: translateX()d;
   transition: .2s scale ease-in-out;
 
   &:after{
@@ -87,19 +86,5 @@
     &:after{
       content: "\25b6";
     }
-  }
-}
-
-.section-collapsed{
-  transition: .2s ease collapse-panel;
-  overflow: hidden;
-}
-
-@keyframes collapse-panel{
-  from{
-    transform: translateX(0%);
-  }
-  to{
-    transform: translateX(-100%);
   }
 }
