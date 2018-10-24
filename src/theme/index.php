@@ -1,4 +1,4 @@
-<?php echo head(); ?>
+<?php echo head(array('bodyclass'=>'home')); ?>
 
 <?php
   //get id for neatline iframe
@@ -13,7 +13,7 @@
 <section class="landing-page homepage">
   <section class="landing-page-intro section-collapsible" id="page-intro" aria-hidden="false">
     <button class="collapse-section-control" aria-expanded="true" aria-controls="page-intro"></button>
-    <div class="landing-page-intro-inner">
+    <div class="section-collapsible-inner">
       <p class="site-description"><?php echo get_theme_option('Homepage Tagline'); ?></p>
       <hr>
       <div class="site-actions">

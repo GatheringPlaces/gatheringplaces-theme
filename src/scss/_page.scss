@@ -6,8 +6,12 @@
 }
 
 .page-header{
-  padding-top: 4rem;
+  padding-top: 2rem;
   background-color: $secondary-color;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    padding-top: 4rem;
+  }
 
   *{
     color: $white;

@@ -6,19 +6,31 @@
 }
 
 .preview{
-  display: flex;
-  flex-wrap: wrap;
   padding: 2rem 0;
   border-bottom: 1px solid $border-color;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .preview-img{
   width: 25%;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .preview-meta{
-  width: calc(70% - 2rem);
-  margin-left: 2rem;
+  width: 100%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: calc(70% - 2rem);
+    margin-left: 2rem;
+  }
 
   h2{
     margin-bottom: .5rem;

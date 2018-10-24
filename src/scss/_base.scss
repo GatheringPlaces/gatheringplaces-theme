@@ -9,11 +9,18 @@ html{
 }
 
 body{
-  height: 100%;
   margin: 0 auto;
   padding: 0;
   background: $primary-color;
   font: 400 16px/1.6 $primary-font-family;
+
+  &.home{
+    height: 100%;
+  }
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    height: 100%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6{

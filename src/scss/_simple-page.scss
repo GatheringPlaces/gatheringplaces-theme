@@ -1,3 +1,10 @@
 .simple-page-content{
-  max-width: 60%;
+
+  @media screen and (#{$bp-larger-than-phablet}){
+    max-width: 80%;
+  }
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    max-width: 60%;
+  }
 }

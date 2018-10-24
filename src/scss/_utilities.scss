@@ -56,9 +56,7 @@
 }
 
 .collapse-section-control{
-  position: absolute;
-  top: 50%;
-  right: 0;
+  display: none;
   width: 2rem;
   height: 2rem;
   border: 0;
@@ -70,6 +68,13 @@
   cursor: pointer;
   transition: .2s scale ease-in-out;
 
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+  }
+
   &:after{
     content: "\25c0";
     display: block;
@@ -80,9 +85,6 @@
   }
 
   &.collapsed{
-    //top: 45%;
-    //left: 0;
-
     &:after{
       content: "\25b6";
     }
@@ -90,20 +92,30 @@
 }
 
 .section-collapsible{
-  position: absolute;
-  left: 0;
   transition: left .2s linear;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    left: 0;
+  }
 }
 
 .section-collapsed{
   left: calc(-30% + 2rem);
   overflow: hidden;
+
+  .section-collapsible-inner{
+    visibility: hidden;
+  }
 }
 
 .section-expandable{
-  position: absolute;
-  right: 0;
   transition: width .2s linear;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    right: 0;
+  }
 }
 
 .section-expanded{
