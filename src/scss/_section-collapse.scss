@@ -1,0 +1,68 @@
+.collapse-section-control{
+  display: none;
+  width: 2rem;
+  height: 3rem;
+  border: 0;
+  background-color: $white;
+  color: $primary-color;
+  font-size: .875rem;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  transition: all .2s linear;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+  }
+
+  &:after{
+    content: "Hide";
+    display: block;
+    margin-top: 1rem;
+    transform:rotate(270deg);
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+
+  &.collapsed{
+    &:after{
+      content: "Show";
+    }
+  }
+}
+
+.section-collapsible{
+  transition: left .2s linear;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    left: 0;
+  }
+}
+
+.section-collapsed{
+  left: calc(-30% + 2rem);
+  overflow: hidden;
+
+  .section-collapsible-inner{
+    visibility: hidden;
+  }
+}
+
+.section-expandable{
+  transition: width .2s linear;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    position: absolute;
+    right: 0;
+  }
+}
+
+.section-expanded{
+  width: calc(100% - 2rem) !important;
+}
