@@ -1,8 +1,16 @@
 
 //form in nav
 .search-form{
-  margin-left: 2rem;
-  background-color: rgba(255,255,255, .4);
+  display: flex;
+  width: 40%;
+  margin: 4rem auto 1rem;
+  background-color: rgba(255,255,255, .7);
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: auto;
+    margin: 0 0 0 2rem;
+    background-color: rgba(255,255,255, .4);
+  }
 
 
   ::placeholder{
@@ -12,10 +20,12 @@
   }
 
   .form-control{
+    width: 80%;
     display: inline-block;
   }
 
   input[type=text]{
+    width: 100%;
     padding: .75rem;
     border: 0;
     background-color: transparent;
@@ -25,6 +35,7 @@
 
 .search-button{
   display: inline-block;
+  width: 20%;
   background-color: transparent;
   border: 0;
   text-align: center;

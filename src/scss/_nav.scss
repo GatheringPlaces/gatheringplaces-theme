@@ -1,19 +1,21 @@
 .site-nav{
   position: fixed;
-  top: 6.5rem;
-  left: -100%;
+  top: 5.125rem;
+  left: 0;
   width: 100%;
   height: 100%;
-  padding: 2rem 0 1rem;
-  background-color: $white;
+  padding: 4rem 0 1rem;
+  background-color: $primary-color;
   z-index: 999;
   opacity: .99;
-  transition: left .2s ease-in-out;
+  transform: translateX(-100%);
+  transition: transform .2s linear;
 
   @media screen and (#{$bp-larger-than-tablet}){
     position: static;
     display: flex;
     float: right;
+    top: 0;
     width: auto;
     height: auto;
     margin-top: .25rem;
@@ -21,16 +23,17 @@
     background-color: transparent;
     border-top: 0;
     opacity: 1;
+    transform: none;
   }
 
   &.open{
-    left: 0;
+    transform: translateX(0);
   }
 }
 
 .nav{
   @include unstyled-list;
-  width: 80%;
+  width: 60%;
   margin: auto;
 
   @media screen and (#{$bp-larger-than-tablet}){
@@ -48,7 +51,11 @@
 
     &.active{
       a{
-        color: $primary-color;
+        color: $secondary-color;
+
+        @media screen and (#{$bp-larger-than-tablet}){
+          color: $primary-color;
+        }
       }
     }
   }
@@ -71,17 +78,24 @@
 
 .site-nav-control {
   position: absolute;
-  top: 1rem;
+  top: 1.15rem;
   right: 1rem;
   display: inline-block;
   float: right;
+  width: 6rem;
   height: auto;
-  padding: .375rem 1rem;
-  color: $primary-color;
-  background: $white;
-  border-color: transparent;
+  padding: .75rem 1rem;
+  color: $white;
+  background-color: transparent;
+  border-color: $white;
   font-family: $primary-font-family;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity .1s linear;
+
+  &:hover{
+    opacity: .7;
+  }
 
   @media screen and (#{$bp-larger-than-tablet}){
     display: none;
@@ -89,9 +103,9 @@
 }
 
 .open-site-nav:before {
-  content: '\2630';
+  content: 'Menu';
 }
 
 .close-site-nav:before {
-  content: '\00D7';
+  content: 'Close'
 }

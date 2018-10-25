@@ -17,8 +17,8 @@ $primary-font-family: 'Montserrat', sans-serif;
 $max-width: 64rem; //1024px
 
 //break points
-$bp-larger-than-mobile: "min-width: 400px" !default;
-$bp-larger-than-phablet: "min-width: 550px" !default;
-$bp-larger-than-tablet: "min-width: 850px" !default;
-$bp-larger-than-desktop: "min-width: 1140px" !default;
-$bp-larger-than-desktophd: "min-width: 1200px" !default;
+$bp-larger-than-mobile: "min-width: 30rem" !default;
+$bp-larger-than-phablet: "min-width: 40rem" !default;
+$bp-larger-than-tablet: "min-width: 60rem" !default;
+$bp-larger-than-desktop: "min-width: 70rem" !default;
+$bp-larger-than-desktophd: "min-width: 80rem" !default;
