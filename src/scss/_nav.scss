@@ -78,18 +78,18 @@
 
 .site-nav-control {
   position: absolute;
-  top: 1.15rem;
+  top: 1.25rem;
   right: 1rem;
   display: inline-block;
   float: right;
-  width: 6rem;
+  width: 5rem;
   height: auto;
-  padding: .75rem 1rem;
+  padding: .5rem .75rem;
   color: $white;
   background-color: transparent;
   border-color: $white;
   font-family: $primary-font-family;
-  font-size: 1rem;
+  font-size: .875rem;
   cursor: pointer;
   transition: opacity .1s linear;
 

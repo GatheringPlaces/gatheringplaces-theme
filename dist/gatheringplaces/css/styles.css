@@ -96,7 +96,10 @@ a {
     color: #fff; }
   .page-header h1 {
     max-width: 75%;
-    font-size: 2.25rem; }
+    font-size: 2rem; }
+    @media screen and (min-width: 60rem) {
+      .page-header h1 {
+        font-size: 2.25rem; } }
 
 .page-content {
   background-color: #fff; }
@@ -187,18 +190,18 @@ a {
 
 .site-nav-control {
   position: absolute;
-  top: 1.15rem;
+  top: 1.25rem;
   right: 1rem;
   display: inline-block;
   float: right;
-  width: 6rem;
+  width: 5rem;
   height: auto;
-  padding: .75rem 1rem;
+  padding: .5rem .75rem;
   color: #fff;
   background-color: transparent;
   border-color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: .875rem;
   cursor: pointer;
   transition: opacity .1s linear; }
   .site-nav-control:hover {
@@ -293,8 +296,11 @@ a {
   margin: auto;
   text-align: center; }
   .pagination li {
-    display: inline-block;
-    margin: 0 1rem; }
+    margin: 1rem; }
+    @media screen and (min-width: 30rem) {
+      .pagination li {
+        display: inline-block;
+        margin: 0 1rem; } }
   .pagination a {
     display: block;
     padding: .5rem 1.25rem;
@@ -433,11 +439,21 @@ a {
   right: 0;
   width: 100%; }
 
+#neatline #static-bubble {
+  z-index: 5000; }
+
 #static-bubble {
+  right: 20px;
+  left: 20px;
+  margin: auto;
   padding: 0;
   border-bottom: 2rem solid #fff;
   box-shadow: 1px 1px 3px #9797A4;
   font-size: .875rem; }
+  @media screen and (min-width: 60rem) {
+    #static-bubble {
+      left: 70px;
+      right: unset; } }
   #static-bubble.selected {
     opacity: 1; }
   #static-bubble .close {
@@ -460,8 +476,10 @@ a {
       text-decoration: underline; }
   #static-bubble hr {
     max-width: 60%;
-    margin: 2rem 0;
+    margin: 2rem auto;
     padding: 0 !important; }
+  #static-bubble .content.item {
+    display: none; }
 
 .previews {
   list-style: none;
@@ -478,7 +496,10 @@ a {
       flex-wrap: wrap; } }
 
 .preview-img {
-  width: 25%; }
+  width: 50%; }
+  @media screen and (min-width: 60rem) {
+    .preview-img {
+      width: 25%; } }
   .preview-img img {
     max-width: 100%;
     height: auto; }

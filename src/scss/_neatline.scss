@@ -16,11 +16,23 @@
   width: 100%;
 }
 
+#neatline #static-bubble{
+  z-index: 5000;
+}
+
 #static-bubble{
+  right: 20px;
+  left: 20px;
+  margin: auto;
   padding: 0;
   border-bottom: 2rem solid $white;
   box-shadow: 1px 1px 3px $dark-grey;
   font-size: .875rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    left: 70px;
+    right: unset;
+  }
 
   &.selected{
     opacity: 1;
@@ -54,7 +66,12 @@
 
   hr{
     max-width: 60%;
-    margin: 2rem 0;
+    margin: 2rem auto;
     padding: 0 !important;
+  }
+
+  //hiding the item details to avoid iframe issue
+  .content.item{
+    display: none;
   }
 }

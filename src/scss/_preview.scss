@@ -16,7 +16,11 @@
 }
 
 .preview-img{
-  width: 25%;
+  width: 50%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: 25%;
+  }
 
   img{
     max-width: 100%;
