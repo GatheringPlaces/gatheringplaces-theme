@@ -22,3 +22,6 @@ vendor/
 composer.json
 composer.lock
 aliases
+
+#ignore zip files
+*.zip
