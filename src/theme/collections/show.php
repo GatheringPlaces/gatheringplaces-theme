@@ -23,9 +23,7 @@
               <li class="collection-item">
                 <a href="<?php echo get_theme_option('baseurl'); ?>items/show/<?php echo $item->id; ?>">
                   <figure class="collection-item-asset">
-                    <?php if (metadata('item', 'has thumbnail')): ?>
-                      <?php echo item_image('square_thumbnail', array('alt' => $itemTitle)); ?>
-                    <?php endif; ?>
+                    <?php echo item_image('square_thumbnail', array('alt' => $itemTitle)); ?>
                     <figcaption>
                       <?php echo $itemTitle; ?>
                     </figcaption>
