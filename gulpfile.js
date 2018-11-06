@@ -14,7 +14,7 @@ gulp.task('browser-sync', ['sass', 'templates'], function() {
 
 //move templates
 gulp.task('templates', function(){
-  return gulp.src('src/theme/**/*')
+  return gulp.src(['!src/theme/**/*.jpg', 'src/theme/**/*'])
     .pipe(strip())
     .pipe(gulp.dest('./omeka-2.6.1/themes/gatheringplaces'))
     .pipe(gulp.dest('./dist/gatheringplaces'))

@@ -9,7 +9,6 @@
       <ul class="breadcrumbs">
         <li><a href="<?php echo get_theme_option('baseurl'); ?>">Home</a></li>
         <li><a href="<?php echo get_theme_option('baseurl'); ?>collections/browse/">Places</a></li>
-        <li><?php echo $collectionTitle; ?></li>
       </ul>
       <h1><?php echo $collectionTitle; ?></h1>
       <p>Collection curated by <?php echo (metadata('collection', array('Dublin Core', 'Creator'))?metadata('collection', array('Dublin Core', 'Creator')):metadata('collection', array('Dublin Core', 'Contributor'))); ?></p>

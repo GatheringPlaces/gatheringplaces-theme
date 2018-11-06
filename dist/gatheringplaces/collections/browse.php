@@ -32,8 +32,8 @@ echo head(array('title' => $pageTitle));
               <div class="collection-description">
                   <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet' => 150))); ?>
               </div>
-              <p class="collection-size">This place contains <?php echo metadata('collection', 'total_items'); ?> items.</p>
             <?php endif; ?>
+            <p class="collection-size">This place has <?php echo metadata('collection', 'total_items'); ?> items to view.</p>
           </div>
 
           <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
