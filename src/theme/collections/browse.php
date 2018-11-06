@@ -35,16 +35,11 @@ echo head(array('title' => $pageTitle));
             <?php endif; ?>
             <p class="collection-size">This place has <?php echo metadata('collection', 'total_items'); ?> items to view.</p>
           </div>
-
-          <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
-
         </div><!-- end class="collection" -->
-
       <?php endforeach; ?>
     </ul>
-    <?php echo pagination_links(); ?>
-
   </section>
+</section>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections' => $collections, 'view' => $this)); ?>
 

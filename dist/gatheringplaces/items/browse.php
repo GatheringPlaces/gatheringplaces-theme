@@ -2,6 +2,7 @@
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle));
 ?>
+
 <section class="landing-page">
   <section class="landing-page-intro" id="page-intro" aria-hidden="false">
     <h1><?php echo $pageTitle;?> </h1>

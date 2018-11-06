@@ -38,3 +38,5 @@
     </div>
   </section>
 </article>
+
+<?php echo foot(); ?>
