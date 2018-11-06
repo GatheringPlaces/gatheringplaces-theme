@@ -47,7 +47,7 @@ body {
   font: 400 16px/1.6 "Montserrat", sans-serif; }
   body.home {
     height: 100%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     body {
       height: 100%; } }
 
@@ -89,7 +89,7 @@ a {
 .page-header {
   padding-top: 2rem;
   background-color: #6E8787; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .page-header {
       padding-top: 4rem; } }
   .page-header * {
@@ -97,7 +97,7 @@ a {
   .page-header h1 {
     max-width: 75%;
     font-size: 2rem; }
-    @media screen and (min-width: 60rem) {
+    @media screen and (min-width: 55rem) {
       .page-header h1 {
         font-size: 2.25rem; } }
 
@@ -105,31 +105,51 @@ a {
   background-color: #fff; }
 
 .site-header {
-  max-height: 6.5rem;
+  position: relative;
+  height: 6rem;
   background-color: #6E8787; }
   .site-header .container {
-    padding: 1rem .5rem; }
-    @media screen and (min-width: 60rem) {
+    padding: 1.5rem .5rem; }
+    @media screen and (min-width: 55rem) {
       .site-header .container {
         padding: 1.5rem 2rem; } }
 
 .brand {
   display: inline-block;
+  width: 50%;
+  margin-top: .5rem;
+  line-height: 1.1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #fff;
   letter-spacing: 3px;
   font-size: 1.125rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  overflow: hidden; }
+  @media screen and (min-width: 35rem) {
+    .brand {
+      width: auto;
+      margin-top: 0; } }
   .brand svg {
-    width: 3rem;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: auto;
+    height: 100%;
     padding-right: .25rem;
-    vertical-align: middle; }
+    vertical-align: middle;
+    opacity: .6; }
+    @media screen and (min-width: 35rem) {
+      .brand svg {
+        position: static;
+        width: 3rem;
+        height: auto;
+        opacity: 1; } }
 
 .site-nav {
   position: fixed;
-  top: 5.125rem;
+  top: 6rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -139,7 +159,7 @@ a {
   opacity: .99;
   transform: translateX(-100%);
   transition: transform .2s linear; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .site-nav {
       position: static;
       display: flex;
@@ -162,19 +182,20 @@ a {
   padding: 0;
   width: 60%;
   margin: auto; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .nav {
-      width: auto; } }
+      width: auto;
+      border: 0; } }
   .nav li {
     margin-bottom: 2rem;
     text-align: center; }
-    @media screen and (min-width: 60rem) {
+    @media screen and (min-width: 55rem) {
       .nav li {
         display: inline-block;
         margin-bottom: 0; } }
     .nav li.active a {
       color: #6E8787; }
-      @media screen and (min-width: 60rem) {
+      @media screen and (min-width: 55rem) {
         .nav li.active a {
           color: #384543; } }
   .nav a {
@@ -184,29 +205,31 @@ a {
     font-family: "Montserrat", sans-serif;
     font-size: .875rem;
     color: #fff; }
-    @media screen and (min-width: 60rem) {
+    @media screen and (min-width: 55rem) {
+      .nav a {
+        margin-left: 1rem; } }
+    @media screen and (min-width: 65rem) {
       .nav a {
         margin-left: 2rem; } }
 
 .site-nav-control {
   position: absolute;
-  top: 1.25rem;
+  top: 1.75rem;
   right: 1rem;
   display: inline-block;
-  float: right;
   width: 5rem;
   height: auto;
   padding: .5rem .75rem;
   color: #fff;
   background-color: transparent;
-  border-color: #fff;
+  border: 1px solid #fff;
   font-family: "Montserrat", sans-serif;
   font-size: .875rem;
   cursor: pointer;
   transition: opacity .1s linear; }
   .site-nav-control:hover {
     opacity: .7; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .site-nav-control {
       display: none; } }
 
@@ -218,10 +241,10 @@ a {
 
 .search-form {
   display: flex;
-  width: 40%;
-  margin: 4rem auto 1rem;
+  width: 60%;
+  margin: 2rem auto 1rem;
   background-color: rgba(255, 255, 255, 0.7); }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .search-form {
       width: auto;
       margin: 0 0 0 2rem;
@@ -235,10 +258,13 @@ a {
     display: inline-block; }
   .search-form input[type=text] {
     width: 100%;
-    padding: .75rem;
+    padding: 1.25rem;
     border: 0;
     background-color: transparent;
     font-family: inherit; }
+    @media screen and (min-width: 55rem) {
+      .search-form input[type=text] {
+        padding: .75rem; } }
 
 .search-button {
   display: inline-block;
@@ -256,11 +282,20 @@ a {
 #sort-links-list {
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: inline-block; }
+  padding: 0; }
+  @media screen and (min-width: 25rem) {
+    #sort-links-list {
+      display: inline-block; } }
   #sort-links-list li {
-    display: inline-block;
-    margin-left: 1rem; }
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem; }
+    @media screen and (min-width: 25rem) {
+      #sort-links-list li {
+        display: inline-block;
+        width: auto;
+        margin-left: 1rem;
+        margin-bottom: 0; } }
     #sort-links-list li a {
       display: block;
       padding: .5rem;
@@ -268,6 +303,14 @@ a {
       letter-spacing: .5px;
       color: #333;
       font-size: .75rem; }
+
+.sort-label {
+  display: block;
+  margin-bottom: .5rem; }
+  @media screen and (min-width: 25rem) {
+    .sort-label {
+      display: inline-block;
+      margin-bottom: 0; } }
 
 .breadcrumbs {
   list-style: none;
@@ -297,7 +340,7 @@ a {
   text-align: center; }
   .pagination li {
     margin: 1rem; }
-    @media screen and (min-width: 30rem) {
+    @media screen and (min-width: 25rem) {
       .pagination li {
         display: inline-block;
         margin: 0 1rem; } }
@@ -316,7 +359,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .landing-page {
       display: flex; } }
   .landing-page h1 {
@@ -330,7 +373,7 @@ a {
   color: #fff;
   overflow-x: auto;
   transform: none; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .landing-page-intro {
       width: 30%; } }
   .landing-page-intro p {
@@ -342,7 +385,7 @@ a {
     margin: 2rem 0;
     border-top: 6px solid #6E8787;
     border-bottom: 0; }
-    @media screen and (min-width: 60rem) {
+    @media screen and (min-width: 55rem) {
       .landing-page-intro hr {
         margin: 2rem auto; } }
 
@@ -352,7 +395,7 @@ a {
   padding: 2rem;
   background-color: #fff;
   overflow-x: auto; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .landing-page-content {
       width: 70%; } }
 
@@ -387,7 +430,7 @@ a {
   line-height: 1;
   cursor: pointer;
   transition: all .1s linear; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .collapse-section-control {
       position: absolute;
       top: 50%;
@@ -405,7 +448,7 @@ a {
 
 .section-collapsible {
   transition: left .2s linear; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .section-collapsible {
       position: absolute;
       left: 0; } }
@@ -418,7 +461,7 @@ a {
 
 .section-expandable {
   transition: width .2s linear; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .section-expandable {
       position: absolute;
       right: 0; } }
@@ -450,7 +493,7 @@ a {
   border-bottom: 2rem solid #fff;
   box-shadow: 1px 1px 3px #9797A4;
   font-size: .875rem; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     #static-bubble {
       left: 70px;
       right: unset; } }
@@ -490,14 +533,14 @@ a {
 .preview {
   padding: 2rem 0;
   border-bottom: 1px solid #cdcdd4; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .preview {
       display: flex;
       flex-wrap: wrap; } }
 
 .preview-img {
   width: 50%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .preview-img {
       width: 25%; } }
   .preview-img img {
@@ -506,7 +549,7 @@ a {
 
 .preview-meta {
   width: 100%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .preview-meta {
       width: calc(70% - 2rem);
       margin-left: 2rem; } }
@@ -524,7 +567,7 @@ a {
   font-size: .75rem;
   letter-spacing: .5px; }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 55rem) {
   .item .page-content .container {
     display: flex;
     flex-wrap: wrap; } }
@@ -533,7 +576,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 100%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .item-assets {
       order: 2;
       width: calc(60% - 4rem);
@@ -541,7 +584,7 @@ a {
 
 .item-metadata {
   width: 100%; }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .item-metadata {
       order: 1;
       width: 40%; } }
@@ -620,10 +663,10 @@ a {
 .collection-item {
   width: calc(50% - 2rem);
   margin: 0 1rem 2rem; }
-  @media screen and (min-width: 40rem) {
+  @media screen and (min-width: 35rem) {
     .collection-item {
       width: calc(33.333% - 2rem); } }
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 55rem) {
     .collection-item {
       width: calc(25% - 2rem); } }
   .collection-item a {
@@ -641,10 +684,14 @@ a {
 .collection-contributors {
   font-size: .875rem; }
 
-@media screen and (min-width: 40rem) {
+.collection-size {
+  font-size: .875em;
+  font-style: italic; }
+
+@media screen and (min-width: 35rem) {
   .simple-page-content {
     max-width: 80%; } }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 55rem) {
   .simple-page-content {
     max-width: 60%; } }

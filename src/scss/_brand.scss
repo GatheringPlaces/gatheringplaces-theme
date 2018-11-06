@@ -1,16 +1,37 @@
 .brand{
   display: inline-block;
+  width: 50%;
+  margin-top: .5rem;
+  line-height: 1.1;
   font-family: $primary-font-family;
   font-weight: 700;
   color: $white;
   letter-spacing: 3px;
   font-size: 1.125rem;
   text-transform: uppercase;
+  overflow: hidden;
+
+  @media screen and (#{$bp-larger-than-phablet}){
+    width: auto;
+    margin-top: 0;
+  }
 
   svg{
-    width: 3rem;
-    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: auto;
+    height: 100%;
     padding-right: .25rem;
     vertical-align: middle;
+    opacity: .6;
+
+    @media screen and (#{$bp-larger-than-phablet}){
+      position: static;
+      width: 3rem;
+      height: auto;
+      opacity: 1;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .site-nav{
   position: fixed;
-  top: 5.125rem;
+  top: 6rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -38,6 +38,7 @@
 
   @media screen and (#{$bp-larger-than-tablet}){
     width: auto;
+    border: 0;
   }
 
   li{
@@ -69,25 +70,26 @@
     color: $white;
 
     @media screen and (#{$bp-larger-than-tablet}){
-      margin-left: 2rem;
-      //color: $white;
+      margin-left: 1rem;
+    }
 
+    @media screen and (#{$bp-larger-than-desktophd}){
+      margin-left: 2rem;
     }
   }
 }
 
 .site-nav-control {
   position: absolute;
-  top: 1.25rem;
+  top: 1.75rem;
   right: 1rem;
   display: inline-block;
-  float: right;
   width: 5rem;
   height: auto;
   padding: .5rem .75rem;
   color: $white;
   background-color: transparent;
-  border-color: $white;
+  border: 1px solid $white;
   font-family: $primary-font-family;
   font-size: .875rem;
   cursor: pointer;

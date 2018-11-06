@@ -1,12 +1,12 @@
 <?php
-$pageTitle = __('Browse Collections');
+$pageTitle = __('Browse Places');
 echo head(array('title' => $pageTitle));
 ?>
 
 <section class="landing-page">
   <section class="landing-page-intro" id="page-intro" aria-hidden="false">
     <h1><?php echo $pageTitle; ?></h1>
-    <p><?php echo __('We have %s collections to explore.', $total_results); ?></p>
+    <p><?php echo __('We have %s places to explore.', $total_results); ?></p>
   </section>
   <section class="landing-page-content">
     <?php
@@ -32,6 +32,7 @@ echo head(array('title' => $pageTitle));
               <div class="collection-description">
                   <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet' => 150))); ?>
               </div>
+              <p class="collection-size">This place contains <?php echo metadata('collection', 'total_items'); ?> items.</p>
             <?php endif; ?>
           </div>
 

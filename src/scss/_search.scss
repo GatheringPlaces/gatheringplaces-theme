@@ -2,14 +2,14 @@
 //form in nav
 .search-form{
   display: flex;
-  width: 40%;
-  margin: 4rem auto 1rem;
-  background-color: rgba(255,255,255, .7);
+  width: 60%;
+  margin: 2rem auto 1rem;
+  background-color: rgba($white, .7);
 
   @media screen and (#{$bp-larger-than-tablet}){
     width: auto;
     margin: 0 0 0 2rem;
-    background-color: rgba(255,255,255, .4);
+    background-color: rgba($white, .4);
   }
 
 
@@ -26,10 +26,14 @@
 
   input[type=text]{
     width: 100%;
-    padding: .75rem;
+    padding: 1.25rem;
     border: 0;
     background-color: transparent;
     font-family: inherit;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      padding: .75rem;
+    }
   }
 }
 
