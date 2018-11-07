@@ -3,16 +3,20 @@
   <script>
     (function(){
       if (document.querySelector('body').classList.contains('home')){
-        var collapse = document.querySelector('.collapse-section-control');
-        var sectionCollapse = document.querySelector('.section-collapsible');
-        var sectionExpand = document.querySelector('.section-expandable');
-        var state = sectionCollapse.getAttribute('aria-hidden') === 'true' ? false : true;
-        collapse.addEventListener('click', function(){
-          sectionCollapse.classList.toggle('section-collapsed');
-          sectionCollapse.getAttribute('aria-hidden', state);
-          sectionExpand.classList.toggle('section-expanded');
+        var collapse_control = document.querySelector('.collapse-section-control');
+        var section_collapse = document.querySelector('.section-collapsible');
+        var section_expand = document.querySelector('.section-expandable');
+        var section_state;
+
+        collapse_control.addEventListener('click', function(){
+          console.log(section_collapse.getAttribute('aria-hidden'))
+          section_state = (section_collapse.getAttribute('aria-hidden') === 'true' ? false : true );
+          console.log(section_state)
+          section_collapse.classList.toggle('section-collapsed');
+          section_collapse.setAttribute('aria-hidden', section_state);
+          section_expand.classList.toggle('section-expanded');
           this.classList.toggle('collapsed');
-          this.getAttribute('aria-expanded', !state);
+          this.setAttribute('aria-expanded', !section_state);
         })
       }
     })();
@@ -54,8 +58,16 @@
         else{
           menu.setAttribute('aria-hidden', 'false');
         }
+
         menu_control.classList.toggle('open-site-nav');
         menu_control.classList.toggle('close-site-nav');
+
+        if (menu_control.getAttribute('aria-expanded') == 'false'){
+          menu_control.setAttribute('aria-expanded', 'true');
+        }
+        else{
+          menu_control.setAttribute('aria-expanded', 'true');
+        }
       }
 
       //initialization

@@ -43,7 +43,7 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  background: #384543;
+  background: #fff;
   font: 400 16px/1.6 "Montserrat", sans-serif; }
   body.home {
     height: 100%; }
@@ -88,7 +88,7 @@ a {
 
 .page-header {
   padding-top: 2rem;
-  background-color: #6E8787; }
+  background-color: #647B7B; }
   @media screen and (min-width: 55rem) {
     .page-header {
       padding-top: 4rem; } }
@@ -111,7 +111,7 @@ a {
 .site-header {
   position: relative;
   height: 6rem;
-  background-color: #6E8787; }
+  background-color: #647B7B; }
   .site-header .container {
     padding: 1.5rem .5rem; }
     @media screen and (min-width: 55rem) {
@@ -198,7 +198,7 @@ a {
         display: inline-block;
         margin-bottom: 0; } }
     .nav li.active a {
-      color: #6E8787; }
+      color: #647B7B; }
       @media screen and (min-width: 55rem) {
         .nav li.active a {
           color: #384543; } }
@@ -351,7 +351,7 @@ a {
   .pagination a {
     display: block;
     padding: .5rem 1.25rem;
-    background-color: #6E8787;
+    background-color: #647B7B;
     color: #fff;
     text-transform: uppercase;
     font-size: .75rem;
@@ -387,7 +387,7 @@ a {
   .landing-page-intro hr {
     max-width: 30%;
     margin: 2rem 0;
-    border-top: 6px solid #6E8787;
+    border-top: 6px solid #647B7B;
     border-bottom: 0; }
     @media screen and (min-width: 55rem) {
       .landing-page-intro hr {
@@ -402,6 +402,9 @@ a {
   @media screen and (min-width: 55rem) {
     .landing-page-content {
       width: 70%; } }
+
+.home {
+  background-color: #384543; }
 
 .homepage .landing-page-content {
   padding: 0; }
