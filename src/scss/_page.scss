@@ -18,7 +18,7 @@
   }
 
   h1{
-    max-width: 85%;
+
     font-size: 1.5rem;
 
     @media screen and (#{$bp-larger-than-phablet}){
@@ -26,9 +26,16 @@
     }
 
     @media screen and (#{$bp-larger-than-tablet}){
-      max-width: 75%;
       font-size: 2.25rem;
     }
+  }
+}
+
+.page-header-content{
+  max-width: 90%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    max-width: 75%;
   }
 }
 

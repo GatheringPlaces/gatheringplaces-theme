@@ -71,7 +71,7 @@
   }
 
   //hiding the item details to avoid iframe issue
-  .content.item{
+  .content.item > a:last-child{
     display: none;
   }
 }

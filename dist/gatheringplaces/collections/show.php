@@ -10,12 +10,17 @@
         <li><a href="<?php echo get_theme_option('baseurl'); ?>">Home</a></li>
         <li><a href="<?php echo get_theme_option('baseurl'); ?>collections/browse/">Places</a></li>
       </ul>
-      <h1><?php echo $collectionTitle; ?></h1>
-      <p>Collection curated by <?php echo (metadata('collection', array('Dublin Core', 'Creator'))?metadata('collection', array('Dublin Core', 'Creator')):metadata('collection', array('Dublin Core', 'Contributor'))); ?></p>
+      <div class="page-header-content">
+        <h1><?php echo $collectionTitle; ?></h1>
+        <p class="collection-curator">This place curated by <?php echo (metadata('collection', array('Dublin Core', 'Creator'))?metadata('collection', array('Dublin Core', 'Creator')):metadata('collection', array('Dublin Core', 'Contributor'))); ?></p>
+      </div>
     </div>
   </header>
   <section class="page-content">
     <div class="container">
+      <div class="collection-description">
+        <p><?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'))); ?></p>
+      </div>
       <?php if (metadata('collection', 'total_items') > 0): ?>
           <ul class="collection-items">
             <?php foreach (loop('items') as $item): ?>
