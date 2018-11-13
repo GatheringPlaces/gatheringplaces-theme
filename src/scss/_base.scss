@@ -14,11 +14,6 @@ body{
   background: $white;
   font: 400 16px/1.6 $primary-font-family;
 
-  &.home{
-    height: 100%;
-    overflow-x: auto;
-  }
-
   @media screen and (#{$bp-larger-than-tablet}){
     height: 100%;
     overflow-x: auto;

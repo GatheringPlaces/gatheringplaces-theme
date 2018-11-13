@@ -45,9 +45,6 @@ body {
   padding: 0;
   background: #fff;
   font: 400 16px/1.6 "Montserrat", sans-serif; }
-  body.home {
-    height: 100%;
-    overflow-x: auto; }
   @media screen and (min-width: 55rem) {
     body {
       height: 100%;
@@ -410,7 +407,9 @@ a {
       width: 70%; } }
 
 .home {
-  background-color: #384543; }
+  height: 100%;
+  background-color: #384543;
+  overflow-x: hidden; }
 
 .homepage .landing-page-content {
   padding: 0; }
@@ -446,7 +445,7 @@ a {
   @media screen and (min-width: 55rem) {
     .collapse-section-control {
       position: absolute;
-      top: 50%;
+      top: 45%;
       right: 0;
       display: block; } }
   .collapse-section-control:after {
@@ -460,11 +459,18 @@ a {
     content: "Show"; }
 
 .section-collapsible {
-  transition: left .2s linear; }
+  transition: left .2s linear;
+  padding: 0;
+  overflow-x: hidden; }
   @media screen and (min-width: 55rem) {
     .section-collapsible {
-      position: absolute;
+      position: relative;
       left: 0; } }
+
+.section-collapsible-inner {
+  height: 100%;
+  padding: 2rem;
+  overflow-x: auto; }
 
 .section-collapsed {
   left: calc(-30% + 2rem);

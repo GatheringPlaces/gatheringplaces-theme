@@ -13,7 +13,7 @@
 
   @media screen and (#{$bp-larger-than-tablet}){
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 0;
     display: block;
   }
@@ -38,11 +38,19 @@
 
 .section-collapsible{
   transition: left .2s linear;
+  padding: 0;
+  overflow-x: hidden;
 
   @media screen and (#{$bp-larger-than-tablet}){
-    position: absolute;
+    position: relative;
     left: 0;
   }
+}
+
+.section-collapsible-inner{
+  height: 100%;
+  padding: 2rem;
+  overflow-x: auto;
 }
 
 .section-collapsed{
