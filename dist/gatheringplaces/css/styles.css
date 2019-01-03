@@ -306,7 +306,7 @@ a {
     #sort-links-list li a {
       display: block;
       padding: .5rem;
-      background-color: #f5f5f5;
+      background-color: #eee;
       letter-spacing: .5px;
       color: #333;
       font-size: .75rem; }
@@ -509,8 +509,8 @@ a {
   left: 20px;
   margin: auto;
   padding: 0;
-  border-bottom: 2rem solid #fff;
-  box-shadow: 1px 1px 3px #9797A4;
+  border-bottom: 1rem solid #fff;
+  box-shadow: 2px 2px 5px #9797A4;
   font-size: .875rem; }
   @media screen and (min-width: 55rem) {
     #static-bubble {
@@ -533,15 +533,28 @@ a {
     font-size: 1.25rem;
     line-height: 1.4; }
   #static-bubble .content {
+    margin-top: 0;
     padding: 1rem 2rem 2rem; }
     #static-bubble .content a {
       text-decoration: underline; }
+    #static-bubble .content.item {
+      background-color: #eee; }
   #static-bubble hr {
-    max-width: 60%;
-    margin: 2rem auto;
-    padding: 0 !important; }
-  #static-bubble .content.item > a:last-child {
-    display: none; }
+    display: none !important; }
+  #static-bubble .preview {
+    padding: 1rem 0 2rem;
+    border-bottom: 0; }
+  #static-bubble .preview-label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  #static-bubble .preview-img {
+    width: 100%; }
+  #static-bubble .preview-meta {
+    width: 100%;
+    margin-left: 0; }
 
 .previews {
   list-style: none;

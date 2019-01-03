@@ -12,6 +12,7 @@
   <link rel="mask-icon" href="<?php echo get_theme_option('baseurl'); ?>themes/gatheringplaces/assets/safari-pinned-tab.svg" color="#6e8787">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="#6e8787">
+  <base target="_parent">
 
   <?php if ( $description = option('description')): ?>
       <meta name="description" content="<?php echo $description; ?>" />
