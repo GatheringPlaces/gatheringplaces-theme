@@ -2,7 +2,7 @@
   <span class="preview-label">Featured Item</span>
   <?php if (metadata('item', 'has files')): ?>
     <div class="preview-img">
-        <?php echo files_for_item(array('imageSize' => 'thumbnail'), array('class' => 'item-file')); ?>
+        <?php echo files_for_item(array('imageSize' => 'thumbnail', 'linkToFile' => false), array('class' => 'item-file')); ?>
     </div>
   <?php endif; ?>
   <div class="preview-meta">
