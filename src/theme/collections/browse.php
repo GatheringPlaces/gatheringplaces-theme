@@ -38,6 +38,7 @@ echo head(array('title' => $pageTitle));
         </div><!-- end class="collection" -->
       <?php endforeach; ?>
     </ul>
+    <?php echo pagination_links(); ?>
   </section>
 </section>
 
